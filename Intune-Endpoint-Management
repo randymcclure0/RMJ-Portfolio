@@ -6,3 +6,194 @@
 ├── policies/
 ├── troubleshooting/
 └── scripts/
+
+# Microsoft Intune & Endpoint Management Portfolio
+
+This repository contains documentation, lab exercises, and examples demonstrating my knowledge of Microsoft Intune, Microsoft Endpoint Manager, and Windows device administration.
+
+## Topics Covered
+
+- Device Enrollment
+- Windows Autopilot
+- Compliance Policies
+- Configuration Profiles
+- Application Deployment
+- Device Lifecycle Management
+- Endpoint Security
+- Troubleshooting
+
+## Technologies
+
+- Microsoft Intune
+- Microsoft Entra ID
+- Microsoft 365
+- Windows 10/11
+- PowerShell
+docs/device-enrollment.md
+# Device Enrollment
+
+## Overview
+
+Microsoft Intune allows organizations to securely enroll and manage Windows devices from a centralized cloud platform.
+
+## Enrollment Methods
+
+- Company Portal
+- Windows Autopilot
+- Automatic Enrollment via Entra ID
+- BYOD Enrollment
+
+## Enrollment Process
+
+1. Device connects to the internet.
+2. User signs in using Microsoft Entra credentials.
+3. Device registers with Microsoft Entra ID.
+4. Intune enrolls the device.
+5. Compliance and configuration policies apply automatically.
+6. Required applications install.
+
+## Benefits
+
+- Centralized management
+- Secure device access
+- Automated provisioning
+- Simplified deployment
+policies/compliance-policy-example.md
+# Sample Compliance Policy
+
+## Password
+
+- Minimum Length: 12
+- Complexity Required
+- Maximum Age: 90 Days
+
+## Encryption
+
+- BitLocker Required
+
+## Antivirus
+
+- Microsoft Defender Enabled
+
+## Firewall
+
+- Enabled
+
+## Operating System
+
+Minimum Version:
+Windows 11 23H2
+
+## Device Health
+
+- Not Rooted
+- Secure Boot Enabled
+- TPM Enabled
+
+## Compliance Result
+
+Devices failing these requirements are marked non-compliant and may be blocked through Conditional Access.
+policies/configuration-profile.md
+# Windows Configuration Profile
+
+## Purpose
+
+Standardize company devices.
+
+## Settings
+
+- Disable Guest Account
+- Enable BitLocker
+- Enable Firewall
+- Configure Windows Update
+- Disable USB Storage (Example)
+- Configure Microsoft Defender
+
+## Result
+
+All enrolled devices receive identical security settings automatically.
+docs/application-deployment.md
+# Application Deployment
+
+Microsoft Intune can automatically deploy applications to enrolled devices.
+
+Example Applications
+
+- Microsoft Office
+- Google Chrome
+- Adobe Acrobat Reader
+- Company Portal
+- Microsoft Teams
+
+Deployment Types
+
+- Required
+- Available
+- Uninstall
+
+Benefits
+
+- Automated installation
+- Version control
+- Reduced manual setup
+docs/device-lifecycle.md
+# Device Lifecycle
+
+## New Device
+
+- Purchase
+- Inventory
+- Enroll in Intune
+- Assign user
+- Deploy policies
+- Deploy applications
+
+## Active Device
+
+- Updates
+- Compliance Monitoring
+- Remote Support
+
+## Device Retirement
+
+- Retire Device
+- Remove Company Data
+- Wipe Device
+- Delete from Intune
+troubleshooting/common-issues.md
+# Common Intune Issues
+
+## Device Not Appearing
+
+Possible Causes
+
+- Enrollment failure
+- User licensing issue
+- Internet connectivity
+- Sync delay
+
+## Policies Not Applying
+
+Check
+
+- Device Sync
+- User Assignment
+- Group Membership
+- Compliance Status
+
+## Company Portal Problems
+
+- Verify login
+- Update Company Portal
+- Restart device
+- Sync manually
+
+## Device Shows Non-Compliant
+
+Possible Reasons
+
+- Encryption disabled
+- Antivirus disabled
+- Outdated OS
+scripts/
+images/

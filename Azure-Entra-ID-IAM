@@ -1,1 +1,187 @@
+README.md
+# Microsoft Entra ID & Identity Management Portfolio
 
+This repository showcases my knowledge of Microsoft Entra ID (formerly Azure Active Directory), Identity & Access Management (IAM), authentication, and Microsoft 365 identity administration.
+
+## Topics Covered
+
+- User Lifecycle Management
+- Group Management
+- Role-Based Access Control (RBAC)
+- Conditional Access
+- Multi-Factor Authentication (MFA)
+- Self-Service Password Reset (SSPR)
+- Identity Security Best Practices
+- PowerShell Automation
+
+## Technologies
+
+- Microsoft Entra ID
+- Microsoft 365
+- Azure Portal
+- PowerShell
+- Windows 11
+users/user-lifecycle.md
+# User Lifecycle Management
+
+## New User
+
+Typical onboarding tasks include:
+
+- Create user account
+- Assign Microsoft 365 license
+- Add to security groups
+- Configure mailbox
+- Assign Teams access
+- Enroll user device
+- Verify MFA registration
+
+---
+
+## Employee Changes
+
+Examples include:
+
+- Department transfer
+- Manager update
+- License changes
+- Group membership updates
+
+---
+
+## Offboarding
+
+Checklist:
+
+- Disable account
+- Reset password
+- Remove licenses
+- Block sign-in
+- Remove group memberships
+- Archive mailbox (per policy)
+- Remove company devices
+groups/security-groups.md
+# Security Groups
+
+Security groups simplify permission management across Microsoft 365.
+
+Examples:
+
+- IT Administrators
+- Teachers
+- Human Resources
+- Finance
+- Students
+
+Benefits:
+
+- Easier permission assignment
+- Simplified application deployment
+- Consistent policy management
+groups/rbac.md
+# Role-Based Access Control (RBAC)
+
+RBAC allows administrators to grant only the permissions required for a user's job.
+
+Examples
+
+Global Administrator
+
+- Full tenant administration
+
+User Administrator
+
+- Create users
+- Reset passwords
+- Manage group memberships
+
+Help Desk Administrator
+
+- Password resets
+- Unlock accounts
+
+Benefits
+
+- Least Privilege
+- Reduced security risk
+- Easier auditing
+conditional-access/overview.md
+# Conditional Access
+
+Conditional Access evaluates sign-in requests before allowing access to Microsoft resources.
+
+Common Conditions
+
+- User
+- Device Compliance
+- Location
+- Risk Level
+- Application
+
+Example Policy
+
+IF
+
+User = Employees
+
+AND
+
+Device = Compliant
+
+THEN
+
+Allow Access
+
+ELSE
+
+Require MFA
+authentication/mfa.md# Multi-Factor Authentication
+
+MFA strengthens account security by requiring multiple forms of authentication.
+
+Common Methods
+
+- Microsoft Authenticator
+- SMS
+- Phone Call
+- FIDO2 Security Keys
+- Windows Hello for Business
+
+Benefits
+
+- Protects against password theft
+- Reduces account compromise
+- Supports Zero Trust security
+authentication/sspr.md
+# Self-Service Password Reset (SSPR)
+
+SSPR allows users to securely reset forgotten passwords without contacting the help desk.
+
+Verification Methods
+
+- Authenticator App
+- Phone Number
+- Email
+- Security Questions
+
+Advantages
+
+- Faster recovery
+- Reduced help desk workload
+- Improved user experience
+docs/security-best-practices.md
+# Identity Security Best Practices
+
+- Enable MFA for all users
+- Use Conditional Access
+- Follow Least Privilege
+- Regularly review administrator roles
+- Monitor sign-in logs
+- Remove inactive accounts
+- Enable passwordless authentication when possible
+- Audit guest users regularly
+powershell/
+Get-MgUser
+Get-MgGroup
+Get-MgUser -Filter "accountEnabled eq false"
+Get-MgSubscribedSku
